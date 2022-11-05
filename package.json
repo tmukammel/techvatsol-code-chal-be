@@ -1,0 +1,47 @@
+{
+	"name": "techvatsol-code-chal-be",
+	"version": "1.0.0",
+	"description": "Technovative Solutions code challenge System design (wiki) and backend project.",
+	"main": "app.js",
+	"scripts": {
+		"format": "prettier --write \"**/*.{js,ts}\"",
+		"lint": "eslint \"**/*.{js,ts}\" --fix",
+		"dotenv": "cp .env.example .env.production & cp .env.example .env.development",
+		"build": "rimraf ./dist && NODE_ENV=development tsc",
+		"prod": "rimraf ./dist && NODE_ENV=production tsc",
+		"dev": "NODE_ENV=development node ./dist/app",
+		"watch": "NODE_ENV=development nodemon --watch '**/*.ts' --exec 'ts-node' src/app.ts",
+		"migrate": "NODE_ENV=development sequelize db:migrate"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tmukammel/techvatsol-code-chal-be.git"
+	},
+	"author": "Twaha Mukammel",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tmukammel/techvatsol-code-chal-be/issues"
+	},
+	"homepage": "https://github.com/tmukammel/techvatsol-code-chal-be#readme",
+	"devDependencies": {
+		"@types/cors": "^2.8.12",
+		"@types/express": "^4.17.14",
+		"@typescript-eslint/eslint-plugin": "^5.42.0",
+		"@typescript-eslint/parser": "^5.42.0",
+		"eslint": "^8.26.0",
+		"prettier": "^2.7.1",
+		"rimraf": "^3.0.2",
+		"sequelize-cli": "^6.5.2",
+		"ts-node": "^10.9.1"
+	},
+	"dependencies": {
+		"body-parser": "^1.20.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"dotenv-flow": "^3.2.0",
+		"express": "^4.18.2",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.25.3",
+		"sequelize-query": "^1.0.4"
+	}
+}
