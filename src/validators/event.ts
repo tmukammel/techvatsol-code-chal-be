@@ -14,7 +14,7 @@ export const createEventValidationSchema = checkSchema({
 		}
 	},
 	date: {
-		isDate: {
+		isDateTime: {
 			errorMessage: 'Date should be in a valid UTC date format'
 		}
 	}
@@ -37,7 +37,7 @@ export const updateEventValidationSchema = checkSchema({
 		optional: true
 	},
 	date: {
-		isDate: {
+		isDateTime: {
 			errorMessage: 'Date should be in a valid UTC date format'
 		},
 		optional: true
