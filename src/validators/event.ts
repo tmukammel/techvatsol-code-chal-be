@@ -30,7 +30,7 @@ export const updateEventValidationSchema = checkSchema({
 	},
 	location: {
 		isLength: {
-			errorMessage: 'Password should be at least 7 chars long',
+			errorMessage: 'Location should be at least 7 chars long',
 			// Multiple options would be expressed as an array
 			options: { min: 7 }
 		},
