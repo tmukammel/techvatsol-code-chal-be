@@ -1,6 +1,15 @@
 import { Events } from '../services/events';
+const { validationResult } = require('express-validator');
 
 export const createEvent = (req: any, res: any) => {
+	const errors = validationResult(req);
+	if (!errors.isEmpty()) {
+		return res.status(400).send({
+			success: false,
+			message: 'Event creation failed.',
+			errors: errors.array()
+		});
+	}
 	return new Events()
 		.createEvent(req)
 		.then((event: any) => {
@@ -20,6 +29,14 @@ export const createEvent = (req: any, res: any) => {
 };
 
 export const updateEvent = (req: any, res: any) => {
+	const errors = validationResult(req);
+	if (!errors.isEmpty()) {
+		return res.status(400).send({
+			success: false,
+			message: 'Event creation failed.',
+			errors: errors.array()
+		});
+	}
 	return new Events()
 		.updateEvent(req)
 		.then((event: any) => {
