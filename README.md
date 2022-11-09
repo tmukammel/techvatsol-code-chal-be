@@ -64,3 +64,29 @@ npm run prod
 # 2. Run the Launch Program (which is already configured in ./.vscode/launch.json)
 # 3. Set your breakpoints and probably call target breakpoint associated API to debug
 ```
+
+## Usage
+
+### Postman
+
+> You can try out the APIs downloading and importing [this](https://www.getpostman.com/collections/6385d7940693ecae9928) postman collection from Import > Link option.
+> 
+> Please also import this postman environment as a file or Raw text\
+> and set the key `URL` to the `Port` you set in the `.env` file.
+
+```json
+{
+	"id": "a49c4668-5db8-443e-8bb7-763949da607b",
+	"name": "techvatsol-be-local",
+	"values": [
+		{
+			"key": "URL",
+			"value": "http://127.0.01:3007",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-11-09T03:37:53.120Z",
+	"_postman_exported_using": "Postman/10.0.42"
+}
+```
